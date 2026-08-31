@@ -1,0 +1,29 @@
+Delivered-To: alice@company.com
+Received: by 2002:a05:6512:cccc:b0:1:2:3 with SMTP id m1;
+        Wed, 27 Aug 2025 07:00:10 -0700 (PDT)
+Received: from mx1.company.com (mx1.company.com. [203.0.113.10])
+        by mx.google.com with ESMTPS id r5
+        for <alice@company.com>;
+        Wed, 27 Aug 2025 07:00:08 -0700 (PDT)
+Received: from internal-relay.company.com (internal-relay.company.com [10.10.5.5])
+        by mx1.company.com with ESMTP id t6;
+        Wed, 27 Aug 2025 14:00:05 +0000 (UTC)
+Received: from bob-laptop.company.com (bob-laptop.company.com [10.10.1.22])
+        by internal-relay.company.com with SMTP id u7;
+        Wed, 27 Aug 2025 14:00:02 +0000 (UTC)
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@company.com header.s=s1 header.b=ghi789;
+       spf=pass (google.com: domain of bob@company.com designates 203.0.113.10 as permitted sender) smtp.mailfrom=bob@company.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=company.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=company.com; s=s1;
+        h=from:to:subject:date:message-id;
+        bh=ghi=; b=ghi789
+Return-Path: <bob@company.com>
+From: Bob Smith <bob@company.com>
+To: alice@company.com
+Subject: Meeting notes from today
+Message-ID: <9012ijkl@company.com>
+Date: Wed, 27 Aug 2025 14:00:00 +0000
+MIME-Version: 1.0
+X-Mailer: Microsoft Outlook 16.0
+Content-Type: text/plain; charset="UTF-8"

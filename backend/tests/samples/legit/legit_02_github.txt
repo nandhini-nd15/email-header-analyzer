@@ -1,0 +1,22 @@
+Delivered-To: dev@example.com
+Received: by 2002:a05:6512:bbbb:b0:1:2:3 with SMTP id x9;
+        Tue, 26 Aug 2025 09:30:00 -0700 (PDT)
+Received: from out-24.smtp.github.com (out-24.smtp.github.com. [192.30.252.204])
+        by mx.google.com with ESMTPS id q4
+        for <dev@example.com>;
+        Tue, 26 Aug 2025 09:29:58 -0700 (PDT)
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@github.com header.s=s1 header.b=def456;
+       spf=pass (google.com: domain of notifications@github.com designates 192.30.252.204 as permitted sender) smtp.mailfrom=notifications@github.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com; s=s1;
+        h=from:to:subject:date:message-id;
+        bh=def=; b=def456
+Return-Path: <notifications@github.com>
+From: GitHub <notifications@github.com>
+To: dev@example.com
+Subject: [repo] New pull request opened
+Message-ID: <5678efgh@github.com>
+Date: Tue, 26 Aug 2025 16:29:57 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"

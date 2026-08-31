@@ -1,0 +1,18 @@
+Delivered-To: victim@example.com
+Received: by 2002:a05:6512:eeee:b0:1:2:3 with SMTP id q2;
+        Thu, 28 Aug 2025 04:15:00 -0700 (PDT)
+Received: from mail.microsft-alerts.com (mail.microsft-alerts.com. [45.142.212.61])
+        by mx.google.com with SMTP id x9
+        for <victim@example.com>;
+        Thu, 28 Aug 2025 04:14:58 -0700 (PDT)
+Authentication-Results: mx.google.com;
+       spf=fail (google.com: domain of security@microsft-alerts.com does not designate 45.142.212.61 as permitted sender) smtp.mailfrom=security@microsft-alerts.com;
+       dmarc=fail (p=NONE) header.from=microsft-alerts.com
+Return-Path: <bounces@notif-track-8821.com>
+From: Microsoft Account Team <security@microsft-alerts.com>
+To: victim@example.com
+Subject: Unusual sign-in activity detected on your account
+Message-ID: <a1b2c3@microsft-alerts.com>
+Date: Thu, 28 Aug 2025 11:14:57 +0000
+MIME-Version: 1.0
+Content-Type: text/html; charset="UTF-8"

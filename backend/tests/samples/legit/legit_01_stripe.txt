@@ -1,0 +1,25 @@
+Delivered-To: user@example.com
+Received: by 2002:a05:6512:aaaa:b0:1:2:3 with SMTP id x1;
+        Mon, 25 Aug 2025 08:12:44 -0700 (PDT)
+Received: from mail-relay.stripe.com (mail-relay.stripe.com. [54.187.1.10])
+        by mx.google.com with ESMTPS id y2
+        for <user@example.com>;
+        Mon, 25 Aug 2025 08:12:43 -0700 (PDT)
+Received: from smtp-out.stripe.com (smtp-out.stripe.com [54.187.1.5])
+        by mail-relay.stripe.com with ESMTP id z3;
+        Mon, 25 Aug 2025 15:12:40 +0000 (UTC)
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@stripe.com header.s=s1 header.b=xyz123;
+       spf=pass (google.com: domain of receipts@stripe.com designates 54.187.1.5 as permitted sender) smtp.mailfrom=receipts@stripe.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=stripe.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=stripe.com; s=s1;
+        h=from:to:subject:date:message-id;
+        bh=abc=; b=xyz123
+Return-Path: <receipts@stripe.com>
+From: Stripe <receipts@stripe.com>
+To: user@example.com
+Subject: Your receipt from Stripe
+Message-ID: <1234abcd@mail.stripe.com>
+Date: Mon, 25 Aug 2025 15:12:39 +0000
+MIME-Version: 1.0
+Content-Type: text/html; charset="UTF-8"
