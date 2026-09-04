@@ -21,22 +21,24 @@ A full-stack web application that analyzes raw email headers to detect spoofing 
 **Deployment:** Render (backend), Vercel (frontend)
 
 ## Project Structure
-email-header-analyzer/
-├── backend/
-│ ├── app/
-│ │ ├── parsers/ # Raw header parsing, Received-chain reconstruction
-│ │ ├── analyzers/ # SPF/DKIM/DMARC verification, risk scoring
-│ │ ├── models/ # Pydantic schemas (API contract)
-│ │ ├── utils/ # IP geolocation
-│ │ └── main.py # FastAPI app and endpoints
-│ └── tests/
-│ ├── samples/ # Labeled legit/phishing email samples
-│ └── test_accuracy.py # Accuracy/precision/recall test harness
-└── frontend/
-└── src/
-├── App.jsx
-└── components/ # ResultsDashboard, HopMap
 
+```text
+email-header-analyzer/
+    backend/
+        app/
+            parsers/          Raw header parsing, Received-chain reconstruction
+            analyzers/        SPF/DKIM/DMARC verification, risk scoring
+            models/           Pydantic schemas (API contract)
+            utils/            IP geolocation
+            main.py           FastAPI app and endpoints
+        tests/
+            samples/          Labeled legit/phishing email samples
+            test_accuracy.py  Accuracy/precision/recall test harness
+    frontend/
+        src/
+            App.jsx
+            components/       ResultsDashboard, HopMap
+```
 
 ## Running Locally
 
